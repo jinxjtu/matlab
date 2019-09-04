@@ -1,0 +1,18 @@
+
+
+
+%%%%%%%%写data文件
+
+fid=fopen('D:\01research\04slot\01slotdesigncode\slotcurve1.dat','w');
+[m,n]=size(xx);
+m=2*m;
+ for i=1:1:n
+    for j=1:1:m
+       if j==m
+         fprintf(fid,'%g\r\n',yy(1,i));
+      else
+        fprintf(fid,'%g\t',xx(1,i));
+       end
+    end
+end
+fclose(fid);
